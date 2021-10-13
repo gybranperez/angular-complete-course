@@ -9,12 +9,19 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
-import { TopsideMenuGridComponent } from './common/topside-menu-grid/topside-menu-grid.component';
+import { TopsideMenuGridComponent } from './template-main-dashboard/topside-menu-grid/topside-menu-grid.component';
+
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
+import { UsersTableComponent } from './users/users-table/users-table.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    TopsideMenuGridComponent
+    TopsideMenuGridComponent,
+    UsersTableComponent
   ],
   imports: [
     BrowserModule,
@@ -24,7 +31,10 @@ import { TopsideMenuGridComponent } from './common/topside-menu-grid/topside-men
     MatButtonModule,
     MatSidenavModule,
     MatIconModule,
-    MatListModule
+    MatListModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule
   ],
   providers: [],
   bootstrap: [AppComponent]

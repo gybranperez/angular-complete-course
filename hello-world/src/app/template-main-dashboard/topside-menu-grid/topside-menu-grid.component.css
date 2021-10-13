@@ -1,9 +1,16 @@
 .navbar{
   justify-content: space-between;
 }
+
 .navbar .navbar-items{
   padding-right: 1rem;
 }
+
+.navbar-items ul.dropdown-menu{
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
 .sidenav-container {
   height: 100%;
 }

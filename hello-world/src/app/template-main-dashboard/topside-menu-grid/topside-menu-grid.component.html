@@ -12,7 +12,7 @@
   </mat-sidenav>
   <mat-sidenav-content>
 
-    <mat-toolbar color="primary" class="bg-dark navbar fixed-top ">
+    <mat-toolbar color="primary" class="bg-dark navbar">
       <div>PAN</div>
       <div class="navbar-items">
         <!-- Example single danger button -->
@@ -28,7 +28,7 @@
             </div>
             
           </button>
-          <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-right" style="right: 0; left: auto;">
+          <ul class="dropdown-menu dropdown-menu-dark" style="right: 0; left: auto;">
             <li><a class="dropdown-item" href="#">
               <span class="material-icons align-middle text-white">
                 person
@@ -42,12 +42,14 @@
               Configuración
             </a></li>
             <li><hr class="dropdown-divider"></li>
-            <li class="bg-danger text-white"><a class="dropdown-item" href="#">
-              <span class="material-icons align-middle text-white">
-                power_settings_new
-              </span>
-              Cerrar sesión
-            </a></li>
+            <li class="bg-danger text-white">
+              <a class="dropdown-item" href="#">
+                <span class="material-icons align-middle text-white">
+                  power_settings_new
+                </span>
+                Cerrar sesión
+              </a>
+            </li>
           </ul>
         </div>
 
@@ -67,8 +69,9 @@
     <!-- Add Content Here -->
   
 
-    <div class="container">
-      <h1>alv</h1>
+    <div class="container mt-3">
+      {{title}}
+      <app-users-table></app-users-table>
     </div>
 
   
