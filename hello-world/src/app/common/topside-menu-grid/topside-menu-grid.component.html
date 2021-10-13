@@ -1,0 +1,78 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="(isHandset$ | async) === false">
+    <mat-toolbar>Menu</mat-toolbar>
+    <mat-nav-list>
+      <a mat-list-item href="#">Link 1</a>
+      <a mat-list-item href="#">Link 2</a>
+      <a mat-list-item href="#">Link 3</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+
+    <mat-toolbar color="primary" class="bg-dark navbar fixed-top ">
+      <div>PAN</div>
+      <div class="navbar-items">
+        <!-- Example single danger button -->
+        <div class="btn-group">
+          <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+            <div class="btn-group" role="group" aria-label="Basic example">
+              <span class="material-icons align-middle text-white">
+                account_circle
+              </span>
+              <span class="material-icons align-middle text-white">
+                arrow_drop_down
+              </span>
+            </div>
+            
+          </button>
+          <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-right" style="right: 0; left: auto;">
+            <li><a class="dropdown-item" href="#">
+              <span class="material-icons align-middle text-white">
+                person
+              </span>
+              Cuenta
+            </a></li>
+            <li><a class="dropdown-item" href="#">
+              <span class="material-icons align-middle text-white">
+                settings
+              </span>
+              Configuración
+            </a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li class="bg-danger text-white"><a class="dropdown-item" href="#">
+              <span class="material-icons align-middle text-white">
+                power_settings_new
+              </span>
+              Cerrar sesión
+            </a></li>
+          </ul>
+        </div>
+
+        
+          <button
+        type="button"
+        class="ms-4 float-end"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      </div>
+      
+    </mat-toolbar>
+    <!-- Add Content Here -->
+  
+
+    <div class="container">
+      <h1>alv</h1>
+    </div>
+
+  
+  
+  
+  </mat-sidenav-content>
+</mat-sidenav-container>
