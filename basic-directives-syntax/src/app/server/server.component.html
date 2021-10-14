@@ -1,0 +1,14 @@
+
+    <div class="card-body">
+        <h5 class="card-title">{{name}}</h5>
+        <h6 class="card-subtitle mb-2 text-muted"></h6>
+        <p class="card-text"> 
+          <span 
+            [ngStyle]="{color: getColorStatus()}" 
+            class="material-icons md-18 align-middle me-1">
+            fiber_manual_record
+          </span>
+          {{status}}
+        </p>
+        <a href="#" class="card-link">Another link</a>
+      </div>
